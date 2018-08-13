@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:mysql://localhost:3306/homework_01?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=UTC</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <!--<property name="dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>-->
+        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">1234</property>
+        <!--
+        create = usuwa tabele wraz z danymi i tworzy schemat na nowo
+
+        update = ewentualnie modyfikuje strukture tabel, dziala tak zeby zachowac dane
+
+        validate = tylko sprawdza strukture tabel i jak nie zgadza sie z ta co jest
+        w twoim programie to wyrzuca wyjatek
+
+        create-drop = schemat tworzony jest kiedy powoluejsz do zycia SessionFactory
+        i niszczony kiedy SessionFactory konczy swoj zywot
+        -->
+        <property name="hbm2ddl.auto">update</property>
+        <property name="show_sql">true</property>
+        <!--<property name="hibernate.connection.autocommit">true</property>-->
+
+        <mapping class="app.model.Company"></mapping>
+        <mapping class="app.model.Card"></mapping>
+        <mapping class="app.model.Contract"></mapping>
+        <mapping class="app.model.Country"></mapping>
+        <mapping class="app.model.HealthCard"></mapping>
+        <mapping class="app.model.Manager"></mapping>
+        <mapping class="app.model.Player"></mapping>
+        <mapping class="app.model.Position"></mapping>
+        <mapping class="app.model.Stadium"></mapping>
+        <mapping class="app.model.Team"></mapping>
+
+    </session-factory>
+</hibernate-configuration>
