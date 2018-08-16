@@ -30,16 +30,5 @@ public class App {
         }
     }
 
-    /*
-    1. Dokoncz DTO, popraw encje.
-    2. Przemysl sprawe, ze masz kilka plikow csv z danymi dla poszczegolnych
-    tabel i robisz osobny service, w ktorym masz metode, ktora najpierw
-    usuwa wszystkie dane z tabel, a potem laduje na nowo dane z plikow csv.
-    3. Pobierz zestawienie druzyna i gracz, ktory strzelil dla niej najwiecej goli
-    4. Pobierz zestawienie druzyna i ilosc czerwonych kartek ktore dostali wszyscy
-    zawodnicy tej druzyny
-    5. Pobierz zestawienie w ktorym kluczem jest obiekt klasy Manager a
-    wartoscia nazwa firmy, z ktora klub trenowany przez managera podpisal
-    najwyzszy kontrakt.
-     */
+
 }
